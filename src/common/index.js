@@ -1,5 +1,5 @@
 
-const backendDomain = "http://localhost:8080"
+const backendDomain = "https://reino-dios-back.vercel.app"
 const SummaryApi = {
     SignUp  : {
         url : `${backendDomain}/api/sign-up`,
