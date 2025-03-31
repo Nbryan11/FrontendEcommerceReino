@@ -16,7 +16,6 @@ const Home = () => {
           <ProductGrid/>
 
 
-          <CategoryWiseProductDisplay category={"hogar"} heading={"Productos recomendados"} />
 
           <HorizontalCardProduct category={"hogar"} heading={"Top's Hogar"}/>
           <HorizontalCardProduct category={"tecnologia"} heading={"Top's Tecnologia"}/>
