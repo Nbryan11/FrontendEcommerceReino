@@ -14,7 +14,6 @@ const BannerProduct = () => {
     const desktopImages = [
         image1, image2
     ]
-
     const mobileImages = [
         image1Mobile2
     ]
