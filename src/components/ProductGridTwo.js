@@ -1,20 +1,27 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import celular from "../assets/celular.webp";
-import reloj from "../assets/reloj.jpg";
-import tablet from "../assets/tablet.png";
-import auriculares from "../assets/auriculares.webp";
 
-import cocina from "../assets/cocinaa.jpg";
-import dining from "../assets/dining.jpg";
-import decor from "../assets/home-decor.jpg";
-import smart from "../assets/smart-home.jpg";
+import relojMujer from "../assets/relojMujer.jpg";
+import relojHombre from "../assets/relojHombre.jpg";
+import relojNiña from "../assets/relojNiña.jpg";
+import relojNiño from "../assets/relojNiño.jpg";
 
-import bolso from "../assets/bolso.jpg";
-import bolsomano from "../assets/bolso-mano.jpg";
-import maleta from "../assets/maleta.jpg";
-import accesorio from "../assets/accesorios.jpg";
+import portatil from "../assets/portatil.jpg";
+import pc from "../assets/pc.jpg";
+import disco from "../assets/disco.jpg";
+import monitor from "../assets/monitor.jpg";
+
+import piel from "../assets/piel.jpg";
+import uñas from "../assets/uñas.jpg";
+import cabello from "../assets/cabello.webp";
+import perfume from "../assets/perfume.jpg";
+
+import linterna from "../assets/linterna.webp";
+import jardineria from "../assets/jardineria.webp";
+import cargador from "../assets/cargador.webp";
+import taladro from "../assets/taladro.webp";
+
 
 import brochas from "../assets/brochas.jpg";
 import espejo from "../assets/espejo.jpg";
@@ -23,42 +30,42 @@ import maquillaje from "../assets/maquillaje.jpg";
 
 const categories = [
   {
-    title: "Esenciales de viaje más queridos",
+    title: "Relojes favoritos",
     items: [
-      { name: "Mochilas", image: bolso },
-      { name: "Maletas", image: maleta },
-      { name: "Accesorios", image: accesorio },
-      { name: "Bolsos de mano", image: bolsomano },
+      { name: "Mujeres", image: relojMujer },
+      { name: "Hombres", image: relojHombre },
+      { name: "Niñas", image: relojNiña },
+      { name: "Niños", image: relojNiño },
     ],
     link: "Discover more",
   },
   {
-    title: "Tecnología inalámbrica",
+    title: "Mejora tu PC aquí",
     items: [
-      { name: "Teléfonos inteligentes", image: celular },
-      { name: "Reloj", image: reloj },
-      { name: "Auriculares", image: auriculares },
-      { name: "Tabletas", image: tablet },
+      { name: "Portátiles", image: portatil },
+      { name: "Equipo de PC", image: pc },
+      { name: "Discos duros", image: disco },
+      { name: "Monitores", image: monitor },
     ],
     link: "Discover more",
   },
   {
-    title: "Hallazgos fantásticos para el hogar",
+    title: "Descubre estos productos para tu cuidado personal",
     items: [
-      { name: "Cocina", image: cocina },
-      { name: "Decoración del hogar", image: decor },
-      { name: "Comedor", image: dining },
-      { name: "Hogar inteligente", image: smart },
+      { name: "Cuidado de la piel", image: piel },
+      { name: "Uñas", image: uñas },
+      { name: "Accesorios para el cabello", image: cabello },
+      { name: "Perfumes", image: perfume },
     ],
     link: "See more",
   },
   {
-    title: "Mejora tu rutina de belleza",
+    title: "Herramientas construcción y accesorios",
     items: [
-      { name: "Maquillaje", image: maquillaje },
-      { name: "Brochas", image: brochas },
-      { name: "Esponjas", image: esponja },
-      { name: "Espejos", image: espejo },
+      { name: "Herramientas", image: taladro },
+      { name: "Carros", image: cargador },
+      { name: "Linternas", image: linterna },
+      { name: "Jardinería", image: jardineria },
     ],
     link: "See more",
   },
@@ -107,4 +114,3 @@ const ProductGrid = () => {
 };
 
 export default ProductGrid;
-
