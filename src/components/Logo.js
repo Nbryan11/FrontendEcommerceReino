@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/corona.png'
+import logo from '../assets/Logooo.png'
 const Logo = ({ parentHeight }) => {
   return (
     <img 

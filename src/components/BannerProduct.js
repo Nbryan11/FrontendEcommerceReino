@@ -2,7 +2,7 @@ import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 
 import React, { useEffect, useState } from 'react'
-import image1 from '../assets/banner/BannerNuevo.jpg'
+import image1 from '../assets/banner/bannerNaranja.jpg'
 import image2 from '../assets/banner/BannerNuevo.jpg'
 import image1Mobile from '../assets/banner/Banner1Mobile.png'
 import image1Mobile2 from '../assets/banner/Banner2Mobile.png'
