@@ -4,8 +4,8 @@ import { FaAngleLeft } from "react-icons/fa";
 import React, { useEffect, useState } from 'react'
 import image1 from '../assets/banner/bannerNaranja.jpg'
 import image2 from '../assets/banner/BannerNuevo.jpg'
-import image1Mobile from '../assets/banner/Banner1Mobile.png'
-import image1Mobile2 from '../assets/banner/Banner2Mobile.png'
+import image1Mobile from '../assets/banner/bannerP.png'
+import image1Mobile2 from '../assets/banner/bannerP.png'
 
 const BannerProduct = () => {
 
@@ -15,7 +15,7 @@ const BannerProduct = () => {
         image1, image2
     ]
     const mobileImages = [
-        image1Mobile2
+        image1Mobile2, image1Mobile
     ]
 
     const nextImage = () =>{
