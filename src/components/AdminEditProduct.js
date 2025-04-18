@@ -114,7 +114,7 @@ const AdminEditProduct = ({
                         className='p-2 bg-slate-100 border rounded'
                     />
 
-                    <label htmlFor='brandName' className='mt-3'>Product brand name: </label>
+                    <label htmlFor='brandName' className='mt-3'>Product brand namee: </label>
                     <input type='text'
                         id='brandName'
                         required
