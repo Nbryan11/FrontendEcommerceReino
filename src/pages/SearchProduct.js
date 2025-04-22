@@ -52,7 +52,7 @@ const SearchProduct = () => {
   })
 
   return (
-    <div className='container mx-auto px-4 overflow-hidden'>
+    <div className='container mx-auto px-6 overflow-hidden'>
       {loading && <p className='text-lg text-center'>Loading.....</p>}
 
       {data.length === 0 && !loading && <p>No Data Found....</p>}
@@ -162,7 +162,7 @@ const SearchProduct = () => {
           </div>
 
           {/* Productos */}
-          <div className="flex-1  px-1">
+          <div className="flex-1">
             <p className='text-lg font-semibold mb-4'>
               Resultados: {filteredData.length}
             </p>
