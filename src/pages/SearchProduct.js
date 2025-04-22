@@ -58,7 +58,7 @@ const SearchProduct = () => {
       {data.length === 0 && !loading && <p>No Data Found....</p>}
 
       {data.length !== 0 && !loading && (
-        <div className="flex gap-6">
+        <div className="flex gap-4">
           {/* Menú de filtros */}
           <div className="w-64 p-4 border rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Filtros</h2>
