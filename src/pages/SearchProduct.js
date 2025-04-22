@@ -52,7 +52,7 @@ const SearchProduct = () => {
   })
 
   return (
-    <div className='container mx-auto p-4'>
+    <div className='container mx-auto px-4 overflow-hidden'>
       {loading && <p className='text-lg text-center'>Loading.....</p>}
 
       {data.length === 0 && !loading && <p>No Data Found....</p>}
