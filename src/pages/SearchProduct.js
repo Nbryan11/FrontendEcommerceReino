@@ -162,7 +162,7 @@ const SearchProduct = () => {
           </div>
 
           {/* Productos */}
-          <div className="flex-1">
+          <div className="flex-1  px-1">
             <p className='text-lg font-semibold mb-4'>
               Resultados: {filteredData.length}
             </p>
