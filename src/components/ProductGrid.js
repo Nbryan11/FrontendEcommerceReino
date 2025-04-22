@@ -35,7 +35,7 @@ const categories = [
   {
     title: "Tecnología inalámbrica",
     items: [
-      { name: "Teléfonos inteligentes", image: celular },
+      { name: "Celular", image: celular, label:"Celulares" },
       { name: "Reloj", image: reloj },
       { name: "Auriculares", image: auriculares },
       { name: "Tabletas", image: tablet },
@@ -46,9 +46,9 @@ const categories = [
     title: "Hallazgos fantásticos para el hogar",
     items: [
       { name: "Cocina", image: cocina },
-      { name: "Decoración del hogar", image: decor },
+      { name: "decoración", image: decor },
       { name: "Comedor", image: dining },
-      { name: "Hogar inteligente", image: smart },
+      { name: "gatos", image: smart },
     ],
     link: "See more",
   },
@@ -86,7 +86,7 @@ const ProductGrid = () => {
               >
                 <img
                   src={item.image || "https://via.placeholder.com/150"}
-                  alt={item.name}
+                  alt={item.label}
                   className="w-full h-20 object-cover rounded-md hover:scale-105 transition-transform"
                 />
                 <p className="mt-2 text-sm text-gray-700">{item.name}</p>

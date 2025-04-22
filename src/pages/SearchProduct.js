@@ -10,6 +10,8 @@ const SearchProduct = () => {
   const [selectedBrand, setSelectedBrand] = useState('')
   const [brands, setBrands] = useState([])
   const [selectedPriceRange, setSelectedPriceRange] = useState('')
+  const [selectedRam, setSelectedRam] = useState('')
+  const [selectedStorage, setSelectedStorage] = useState('')
 
   const fetchProduct = async () => {
     setLoading(true)
@@ -33,15 +35,20 @@ const SearchProduct = () => {
     { label: 'Más de $250.000', min: 250000, max: Infinity },
   ]
 
-  // Filtrar productos por marca y precio
+  // Filtrar productos por marca, precio, RAM y almacenamiento
   const filteredData = data.filter(item => {
     const matchesBrand = selectedBrand ? item.brandName === selectedBrand : true
-
     const matchesPrice = selectedPriceRange
       ? (item.price >= selectedPriceRange.min && item.price < selectedPriceRange.max)
       : true
+    const matchesRam = selectedBrand === 'Celulares' && selectedRam
+      ? item.attributes?.RAM === selectedRam
+      : true
+    const matchesStorage = selectedBrand === 'Celulares' && selectedStorage
+      ? item.attributes?.Almacenamiento === selectedStorage
+      : true
 
-    return matchesBrand && matchesPrice
+    return matchesBrand && matchesPrice && matchesRam && matchesStorage
   })
 
   return (
@@ -56,14 +63,19 @@ const SearchProduct = () => {
           <div className="w-64 p-4 border rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Filtros</h2>
 
+            {/* Subcategorías */}
             <div className="mb-6">
-              <h3 className="font-medium mb-2">Marca</h3>
+              <h3 className="font-medium mb-2">Subcategorías</h3>
               <select
                 value={selectedBrand}
-                onChange={(e) => setSelectedBrand(e.target.value)}
+                onChange={(e) => {
+                  setSelectedBrand(e.target.value)
+                  setSelectedRam('')
+                  setSelectedStorage('')
+                }}
                 className="w-full px-3 py-2 border rounded"
               >
-                <option value="">Todas las marcas</option>
+                <option value="">Todas las subcategorías</option>
                 {brands.map((brand, index) => (
                   <option key={index} value={brand}>
                     {brand}
@@ -72,7 +84,8 @@ const SearchProduct = () => {
               </select>
             </div>
 
-            <div>
+            {/* Precio */}
+            <div className="mb-6">
               <h3 className="font-medium mb-2">Precio</h3>
               <div className="flex flex-col gap-2">
                 {priceRanges.map((range, index) => (
@@ -94,6 +107,58 @@ const SearchProduct = () => {
                 </button>
               </div>
             </div>
+
+            {/* Filtros especiales para Celulares */}
+            {selectedBrand === 'Celulares' && (
+              <div className="mt-6">
+                <h3 className="font-medium mb-2">RAM</h3>
+                <select
+                  value={selectedRam}
+                  onChange={(e) => setSelectedRam(e.target.value)}
+                  className="w-full px-3 py-2 border rounded mb-4"
+                >
+                  <option value="">Todas</option>
+                  {[...new Set(data
+                    .filter(item => item.brandName === 'Celulares')
+                    .map(item => item.attributes?.RAM)
+                  )].map((ram, index) => (
+                    <option key={index} value={ram}>
+                      {ram} GB
+                    </option>
+                  ))}
+                </select>
+
+                <h3 className="font-medium mb-2">Almacenamiento</h3>
+                <select
+                  value={selectedStorage}
+                  onChange={(e) => setSelectedStorage(e.target.value)}
+                  className="w-full px-3 py-2 border rounded"
+                >
+                  <option value="">Todos</option>
+                  {[...new Set(data
+                    .filter(item => item.brandName === 'Celulares')
+                    .map(item => item.attributes?.Almacenamiento)
+                  )].map((storage, index) => (
+                    <option key={index} value={storage}>
+                      {storage} GB
+                    </option>
+                  ))}
+                </select>
+
+                {/* Botón para limpiar filtros de RAM y Almacenamiento */}
+                {(selectedRam || selectedStorage) && (
+                  <button
+                    onClick={() => {
+                      setSelectedRam('')
+                      setSelectedStorage('')
+                    }}
+                    className="text-blue-500 text-sm mt-2 hover:underline"
+                  >
+                    Limpiar filtros de RAM y Almacenamiento
+                  </button>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Productos */}
@@ -111,5 +176,4 @@ const SearchProduct = () => {
 }
 
 export default SearchProduct
-
 

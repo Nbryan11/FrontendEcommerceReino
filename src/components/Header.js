@@ -17,7 +17,16 @@ const categories = [
   { name: "Belleza" },
   { name: "Mascotas" },
   { name: "Herramientas" },
+  { name: "Automotriz" },
+  { name: "Bebé" },
+  { name: "Moda para mujer" },
+  { name: "Moda para hombre" },
+  { name: "Moda para niño" },
+  { name: "Moda para niña" },
+  { name: "Deportes" },
+  { name: "Juguetes y juegos" },
 ];
+
 
 const Header = () => {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
@@ -26,6 +35,7 @@ const Header = () => {
   const [search, setSearch] = useState(searchInput?.search?.split("=")[1] || "");
   const context = useContext(Context);
   const navigate = useNavigate();
+  
   const dispatch = useDispatch();
   const user = useSelector((state) => state?.user?.user);
 
@@ -35,7 +45,19 @@ const Header = () => {
     navigate(value ? `/search?q=${value}` : `/`);
   };
 
+  const deleteCookies = () => {
+    // Aquí debes especificar el nombre de las cookies que quieres eliminar
+    const cookies = document.cookie.split(";");
+  
+    cookies.forEach((cookie) => {
+      const cookieName = cookie.split("=")[0].trim();
+      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
+    });
+  };
+
   const handleLogout = async () => {
+    deleteCookies();
+
     const fetchData = await fetch(SummaryApi.logOut.url, {
       method: SummaryApi.logOut.method,
       credentials: 'include'
