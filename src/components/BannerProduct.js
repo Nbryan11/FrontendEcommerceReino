@@ -6,14 +6,14 @@ import image1 from "../assets/banner/banerAzul.png";
 import image2 from "../assets/banner/bannerTT.png";
 import image3 from "../assets/banner/bannerTTT.png";
 import image1Mobile from "../assets/banner/bannerMobile.png";
-import image1Mobile3 from "../assets/banner/bannerNeww.png";
-import image1Mobile2 from "../assets/banner/bannerFinal.png";
+import image1Mobile3 from "../assets/banner/neewBanner.png";
+import image1Mobile2 from "../assets/banner/newBanner.png";
 
 const BannerProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const desktopImages = [image1, image2, image3];
-  const mobileImages = [image1Mobile, image1Mobile2, image1Mobile3];
+  const mobileImages = [image1Mobile3, image1Mobile, image1Mobile2];
 
   const nextImage = () => {
     if (desktopImages.length > currentImage) {
