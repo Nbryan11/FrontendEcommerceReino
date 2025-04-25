@@ -6,8 +6,8 @@ import image1 from "../assets/banner/banerAzul.png";
 import image2 from "../assets/banner/bannerTT.png";
 import image3 from "../assets/banner/bannerTTT.png";
 import image1Mobile from "../assets/banner/bannerMobile.png";
-import image1Mobile2 from "../assets/banner/Banner2Mobile.png";
-import image1Mobile3 from "../assets/banner/Banner3Mobile.png";
+import image1Mobile3 from "../assets/banner/bannerNeww.png";
+import image1Mobile2 from "../assets/banner/bannerFinal.png";
 
 const BannerProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
