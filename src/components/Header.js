@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-[#0f1111] text-white z-50 relative">
+      <header className="bg-[#211155] text-white z-50 relative">
         <div className="relative flex items-center px-3 py-4 justify-between">
           {/* Menú hamburguesa y logo */}
           <div className="flex items-center gap-2 z-10">
@@ -112,7 +112,7 @@ const Header = () => {
               />
               <button
                 onClick={() => navigate(search ? `/search?q=${search}` : "/")}
-                className="bg-[#febd69] px-4 flex items-center justify-center rounded-r-md h-full"
+                className="bg-[#3f62c2] px-4 flex items-center justify-center rounded-r-md h-full"
               >
                 <CiSearch className="text-xl text-black" />
               </button>

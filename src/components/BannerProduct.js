@@ -2,17 +2,18 @@ import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 
 import React, { useEffect, useState } from "react";
-import image1 from "../assets/banner/bannerNaranja.jpg";
+import image1 from "../assets/banner/banerAzul.png";
 import image2 from "../assets/banner/bannerTT.png";
 import image3 from "../assets/banner/bannerTTT.png";
-import image1Mobile from "../assets/banner/bannerP.png";
-import image1Mobile2 from "../assets/banner/bannerP.png";
+import image1Mobile from "../assets/banner/bannerMobile.png";
+import image1Mobile2 from "../assets/banner/Banner2Mobile.png";
+import image1Mobile3 from "../assets/banner/Banner3Mobile.png";
 
 const BannerProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const desktopImages = [image1, image2, image3];
-  const mobileImages = [image1Mobile2, image1Mobile];
+  const mobileImages = [image1Mobile, image1Mobile2, image1Mobile3];
 
   const nextImage = () => {
     if (desktopImages.length > currentImage) {
