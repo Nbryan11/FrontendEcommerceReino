@@ -22,12 +22,17 @@ const Home = () => {
           <HorizontalCardProduct category={"hogar"} heading={"Top's Hogar"}/>
           <HorizontalCardProduct category={"Tecnologia"} heading={"Top's Tecnologia"}/>
           <HorizontalCardProduct category={"Moda para mujer"} heading={"Top's Moda mujer"}/>
+          <HorizontalCardProduct category={"Moda para hombre"} heading={"Top's Moda hombre"}/>
+
 
           <ProductGridTwo/>
 
 
           <HorizontalCardProduct category={"Mascotas"} heading={"Top's Mascotas"}/>
           <HorizontalCardProduct category={"Belleza"} heading={"Top's Belleza"}/>
+          <HorizontalCardProduct category={"Herramientas"} heading={"Top's Herramientas"}/>
+          <HorizontalCardProduct category={"Deportes"} heading={"Top's Deportes"}/>
+
 
 
 
