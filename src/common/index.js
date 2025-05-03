@@ -5,6 +5,10 @@ const SummaryApi = {
         url : `${backendDomain}/api/sign-up`,
         method : "post"
     },
+    deleteProduct: {
+        url: `${backendDomain}/api/delete-product`,
+        method: "delete"
+    },
 
     SignIn: {
         url: `${backendDomain}/api/sign-in`,

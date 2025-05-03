@@ -21,11 +21,13 @@ const Home = () => {
 
           <HorizontalCardProduct category={"hogar"} heading={"Top's Hogar"}/>
           <HorizontalCardProduct category={"Tecnologia"} heading={"Top's Tecnologia"}/>
+          <HorizontalCardProduct category={"Moda para mujer"} heading={"Top's Moda mujer"}/>
+
           <ProductGridTwo/>
 
 
           <HorizontalCardProduct category={"Mascotas"} heading={"Top's Mascotas"}/>
-          <HorizontalCardProduct category={"Tecnologia"} heading={"Top's Belleza"}/>
+          <HorizontalCardProduct category={"Belleza"} heading={"Top's Belleza"}/>
 
 
 

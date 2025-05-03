@@ -3,7 +3,7 @@ import { FaAngleLeft } from "react-icons/fa";
 
 import React, { useEffect, useState } from "react";
 import image1 from "../assets/banner/banerAzul.png";
-import image2 from "../assets/banner/bannerTT.png";
+import image2 from "../assets/banner/bannerBlue.png";
 import image3 from "../assets/banner/bannerTTT.png";
 import image1Mobile from "../assets/banner/bannerMobile.png";
 import image1Mobile3 from "../assets/banner/neewBanner.png";
@@ -12,7 +12,7 @@ import image1Mobile2 from "../assets/banner/newBanner.png";
 const BannerProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const desktopImages = [image1, image2, image3];
+  const desktopImages = [image1, image2, image1];
   const mobileImages = [image1Mobile3, image1Mobile, image1Mobile2];
 
   const nextImage = () => {
