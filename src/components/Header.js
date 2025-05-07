@@ -96,7 +96,7 @@ const Header = () => {
               &#9776;
             </button>
             <Link to={"/"}>
-              <Logo parentHeight="40px" />
+              <Logo parentHeight="30px" />
             </Link>
           </div>
 
