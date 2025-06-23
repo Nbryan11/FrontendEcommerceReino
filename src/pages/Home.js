@@ -14,7 +14,6 @@ const Home = () => {
     return(
         <div class=" bg-gray-200">
 
-          <BannerProduct/>
           <ProductGrid/>
 
 
